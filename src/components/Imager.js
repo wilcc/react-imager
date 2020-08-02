@@ -66,13 +66,13 @@ class Imager extends Component {
             className="ui fluid large image"
           />
         </div>
-        <div className="ui container">
-          <div style={{ float: 'left' }}>
+        <div className="ui container" style={{display:'flex',justifyContent:'space-between'}}>
+          <div >
             <button onClick={this.handleRandom} className="ui button primary">
               Random
             </button>
           </div>
-          <div style={{ float: 'right' }}>
+          <div >
             <button onClick={this.handleLeft} className="ui button primary">
               {' '}
               <i className="angle left icon"></i>
