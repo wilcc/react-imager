@@ -40,7 +40,11 @@ class Imager extends Component {
       mainImage: `images/${newNum}.jpg`,
     });
   };
-
+  handleImage =(src) => {
+    this.setState({
+        mainImage: src
+    })
+  }
   render() {
     return (
       <div>
@@ -71,10 +75,10 @@ class Imager extends Component {
           <div style={{ float: 'right' }}>
             <button onClick={this.handleLeft} className="ui button primary">
               {' '}
-              <i class="angle left icon"></i>
+              <i className="angle left icon"></i>
             </button>
             <button onClick={this.handleRight} className="ui button primary">
-              <i class="angle right icon"></i>
+              <i className="angle right icon"></i>
             </button>
           </div>
         </div>
@@ -96,6 +100,7 @@ class Imager extends Component {
             return (
               <div key={idx} className="ui image">
                 <img
+                onClick={()=>{this.handleImage(image)}}
                   src={image}
                   alt="..."
                   style={{ width: '300px', height: '300px' }}
