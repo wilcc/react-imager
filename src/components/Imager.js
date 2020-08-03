@@ -63,7 +63,8 @@ class Imager extends Component {
           <img
             src={this.state.mainImage}
             alt=""
-            className="ui fluid large image"
+            className="ui image"
+            style={{ width: '500px', height: '500px' }}
           />
         </div>
         <div className="ui container" style={{display:'flex',justifyContent:'space-between'}}>
